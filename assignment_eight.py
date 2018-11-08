@@ -5,16 +5,16 @@ root.title("Calculator")
 
 # title = tkinter.Label(root, text="Calculator")
 # title.grid(row=1, column=1)
-answer = tkinter.StringVar()
+real_answer = tkinter.StringVar()
 
 
 def one_():
-    number = answer.get()
+    number = real_answer.get()
     new_number = number + "1"
-    answer.set(new_number)
+    real_answer.set(new_number)
 
 
-answer = tkinter.Entry(root, textvariable=answer)
+answer = tkinter.Entry(root, textvariable=real_answer)
 answer.grid(row=2, column=0)
 
 Enter = tkinter.Button(root, text="Enter")
