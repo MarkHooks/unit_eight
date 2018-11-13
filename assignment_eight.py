@@ -44,6 +44,7 @@ def six_():
     real_answer.set(new_number)
 
 
+
 def seven_():
     number = real_answer.get()
     new_numebr = number + "7"
