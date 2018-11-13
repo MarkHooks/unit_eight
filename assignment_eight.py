@@ -2,7 +2,7 @@ import tkinter
 
 root = tkinter.Tk()
 root.title("Calculator")
-
+root.config(bg="tomato2")
 # title = tkinter.Label(root, text="Calculator")
 # title.grid(row=1, column=1)
 real_answer = tkinter.StringVar()
@@ -47,8 +47,8 @@ def six_():
 
 def seven_():
     number = real_answer.get()
-    new_numebr = number + "7"
-    real_answer.set(new_numebr)
+    new_number = number + "7"
+    real_answer.set(new_number)
 
 
 def eight_():
@@ -85,6 +85,12 @@ def minus_():
     real_answer.set(new_number)
 
 
+def divide_():
+    number = real_answer.get()
+    new_number = number + "/"
+    real_answer.set(new_number)
+
+
 def squareroot():
     number = float(real_answer.get())
     new_number = number**.5
@@ -97,64 +103,73 @@ def multiply_():
     real_answer.set(new_number)
 
 
+def square():
+    number = float(real_answer.get())
+    new_number = number**2
+    real_answer.set(str(new_number))
+
+
 def enter():
     equation = real_answer.get()
     new = eval(equation)
     real_answer.set(new)
 
 
-answer = tkinter.Entry(root, textvariable=real_answer)
-answer.grid(row=2, column=0)
+answer = tkinter.Entry(root, textvariable=real_answer, bg="tomato2")
+answer.grid(row=2, column=0, columnspan=4)
 
-Enter = tkinter.Button(root, text="Enter", command=enter)
-Enter.grid(row=7, column=5)
+Enter = tkinter.Button(root, text="Enter", command=enter, fg="tomato")
+Enter.grid(row=7, column=0, columnspan=2, sticky="W,E", ipadx=6, ipady=2)
 
-clear = tkinter.Button(root, text="Clear", command=clear_)
-clear.grid(row=7, column=6)
+clear = tkinter.Button(root, text="Clear", command=clear_, fg="tomato")
+clear.grid(row=7, column=1, columnspan=2, ipadx=6, ipady=2, sticky="E")
 
-plus = tkinter.Button(root, text="+", command=plus_)
-plus.grid(row=6, column=6)
+plus = tkinter.Button(root, text="+", command=plus_, fg="tomato")
+plus.grid(row=6, column=3, sticky="N,E,S,W", ipady=2)
 
-minus = tkinter.Button(root, text="-", command=minus_)
-minus.grid(row=5, column=6)
+divide = tkinter.Button(root, text="/", command=divide_, fg="tomato")
+divide.grid(row=6, column=2, sticky="N,E,S,W", ipady=2)
 
-multiply = tkinter.Button(root, text="*", command=multiply_)
-multiply.grid(row=4, column=6)
+minus = tkinter.Button(root, text="-", command=minus_, fg="tomato")
+minus.grid(row=5, column=3, sticky="N,E,S,W", ipady=2)
 
-squared = tkinter.Button(root, text="xˆ2")
-squared.grid(row=3, column=6)
+multiply = tkinter.Button(root, text="*", command=multiply_, fg="tomato")
+multiply.grid(row=4, column=3, sticky="N,E,S,W", ipady=2)
 
-square_root = tkinter.Button(root, text="√", command=squareroot)
-square_root.grid(row=2, column=6)
+squared = tkinter.Button(root, text="xˆ2", command=square, fg="tomato")
+squared.grid(row=3, column=3, sticky="N,E,S,W", ipady=2)
 
-one = tkinter.Button(root, text="1", command=one_)
-one.grid(row=3, column=1, sticky="W")
+square_root = tkinter.Button(root, text="√", command=squareroot, fg="tomato")
+square_root.grid(row=7, column=3, sticky="N,E,S,W")
 
-two = tkinter.Button(root, text="2", command=two_)
-two.grid(row=3, column=2)
+one = tkinter.Button(root, text="1", command=one_, fg="tomato")
+one.grid(row=3, column=0, sticky="N,E,S,W", ipady=2)
 
-three = tkinter.Button(root, text="3", command=three_)
-three.grid(row=3, column=3)
+two = tkinter.Button(root, text="2", command=two_, fg="tomato")
+two.grid(row=3, column=1, sticky="N,E,S,W", ipady=2)
 
-four = tkinter.Button(root, text="4", command=four_)
-four.grid(row=4, column=1)
+three = tkinter.Button(root, text="3", command=three_, fg="tomato")
+three.grid(row=3, column=2, sticky="N,E,S,W", ipady=2)
 
-five = tkinter.Button(root, text="5", command=five_)
-five.grid(row=4, column=2)
+four = tkinter.Button(root, text="4", command=four_, fg="tomato")
+four.grid(row=4, column=0, sticky="N,E,S,W", ipady=2)
 
-six = tkinter.Button(root, text="6", command=six_)
-six.grid(row=4, column=3)
+five = tkinter.Button(root, text="5", command=five_, fg="tomato")
+five.grid(row=4, column=1, sticky="N,E,S,W", ipady=2)
 
-seven = tkinter.Button(root, text="7", command=seven_)
-seven.grid(row=5, column=1)
+six = tkinter.Button(root, text="6", command=six_, fg="tomato")
+six.grid(row=4, column=2, sticky="N,E,S,W", ipady=2)
 
-eight = tkinter.Button(root, text="8", command=eight_)
-eight.grid(row=5, column=2)
+seven = tkinter.Button(root, text="7", command=seven_, fg="tomato")
+seven.grid(row=5, column=0, sticky="N,E,S,W", ipady=2)
 
-nine = tkinter.Button(root, text="9", command=nine_)
-nine.grid(row=5, column=3)
+eight = tkinter.Button(root, text="8", command=eight_, fg="tomato")
+eight.grid(row=5, column=1, sticky="N,E,S,W", ipady=2)
 
-zero = tkinter.Button(root, text="0", command=zero_)
-zero.grid(row=6, column=2)
+nine = tkinter.Button(root, text="9", command=nine_, fg="tomato")
+nine.grid(row=5, column=2, sticky="N,E,S,W", ipady=2)
+
+zero = tkinter.Button(root, text="0", command=zero_, fg="tomato")
+zero.grid(row=6, column=0, ipadx=18, columnspan=2, sticky="N,E,S,W", ipady=2)
 
 root.mainloop()
