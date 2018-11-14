@@ -12,106 +12,178 @@ real_answer = tkinter.StringVar()
 
 
 def one_():
+    """
+    this is to get the number 1
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "1"
     real_answer.set(new_number)
 
 
 def two_():
+    """
+    this is to get the number 2
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "2"
     real_answer.set(new_number)
 
 
 def three_():
+    """
+    this is to get the number 3
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "3"
     real_answer.set(new_number)
 
 
 def four_():
+    """
+    this is to get the number 4
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "4"
     real_answer.set(new_number)
 
 
 def five_():
+    """
+    this is to get the number 5
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "5"
     real_answer.set(new_number)
 
 
 def six_():
+    """
+    this is to get the number 1
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "6"
     real_answer.set(new_number)
 
 
 def seven_():
+    """
+    this is to get the number 7
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "7"
     real_answer.set(new_number)
 
 
 def eight_():
+    """
+    this is to get the number 8
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "8"
     real_answer.set(new_number)
 
 
 def nine_():
+    """
+    this is to get the number 9
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "9"
     real_answer.set(new_number)
 
 
 def zero_():
+    """
+    this is to get the number 0
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "0"
     real_answer.set(new_number)
 
 
 def clear_():
+    """
+    this is to clear the answer
+    :return:none
+    """
     real_answer.set("")
 
 
 def plus_():
+    """
+    this is to get the + function
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "+"
     real_answer.set(new_number)
 
 
 def minus_():
+    """
+    this is to get the - function
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "-"
     real_answer.set(new_number)
 
 
 def divide_():
+    """
+    this is to get the / function
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "/"
     real_answer.set(new_number)
 
 
 def squareroot():
+    """
+    this is to get the √ function
+    :return:none
+    """
     number = float(real_answer.get())
     new_number = number ** .5
     real_answer.set(str(new_number))
 
 
 def multiply_():
+    """
+    this is to get the * function
+    :return:none
+    """
     number = real_answer.get()
     new_number = number + "*"
     real_answer.set(new_number)
 
 
 def square():
+    """
+    this is to get the Xˆ2 function
+    :return:none
+    """
     number = float(real_answer.get())
     new_number = number ** 2
     real_answer.set(str(new_number))
 
 
 def enter():
+    """
+    this is to get the calculator to work
+    :return: none
+    """
     equation = real_answer.get()
     new = eval(equation)
     real_answer.set(new)
